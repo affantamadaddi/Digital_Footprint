@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/mystyle/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Digital Footprints</title>
+</head>
+<body>
+    <%- include('header') %>
+    <div class="grid">
+        <div>
+            <div class="title">Discover your <br> Digital Footprints</div>
+            <div class="text">Discover where your personal data is and manage your digital footprint.<br>
+            You decide where you want to keep your data and where you don't.</div>
+            <form action="/signup" method="POST">
+                <input type="submit" value="Get Started">
+            </form>
+        </div>
+        <div>
+            <!--  -->
+        </div>
+    </div>
+    <div class="gridTwo">
+        <div class="card">
+            <img src="/images/power.png" width="200px">
+            <div class="title">Giving the power back to you</div>
+            <div class="text">Our technology gives you access,<br> transparency, and control over the data<br> you share online.</div>
+        </div>
+        <div class="card" style="margin-top: 60px;">
+            <img src="/images/decision.png" width="300px">
+            <div class="title">It's your data, you decide.</div>
+            <div class="text">Draw the line between services you use <br> & those you don't, which put you at risk.</div>
+        </div>
+    </div>
+
+
+    <div class="row1-container">
+        <div class="box box-down cyan">
+          <h2>Know where you stand at all times</h2>
+          <p>Get a clear overview of your data so that you can start taking back control</p>
+        </div>
+    
+        <div class="box red">
+          <h2>Discover your digital footprint</h2>
+          <p>We map all the companies you've interacted with through your email</p>
+        </div>
+    
+        <div class="box box-down blue">
+          <h2>Make informed decisions</h2>
+          <p>Easily understand the type of data that companies collect about you and your level of risk</p>
+        </div>
+    </div>
+    <div class="row2-container">
+        <div class="box orange">
+          <h2>Exercise your rights</h2>
+          <p>Send a deletion request to remove your data from services you no longer use.</p>
+        </div>
+    </div>
+
+
+    <div class="gridLast">
+        <div>
+            <div class="title">You are the sole <br> owner of your data</div>
+            <div class="text">We discover the companies that hold your data by analyzing your<br>emails’ subject lines. We do this without collecting any of your<br>emails.</div>
+        </div> 
+        <div>
+            <img src="/images/free soul.png" width="500px">
+        </div>
+    </div>
+</body>
+</html>

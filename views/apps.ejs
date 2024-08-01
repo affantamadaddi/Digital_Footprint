@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/mystyle/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <title>Digital Footprints - Apps</title>
+</head>
+<body>
+    <%- include('header') %>
+    <div id="gridOfFour">
+    <% 
+    for(let app of data) {
+            for(let companyName of app.companyName) {
+                var contacts = [];
+                var logo = companyName[0]; %>
+                <div><div class="logo"><div><%= logo %></div></div>
+                <div class="name"><%= companyName %></div><br>
+                <%
+                for(let companyEmail of app.companyEmails) {
+                    if(companyEmail.indexOf(companyName) !== -1) {                  
+                    var emails = companyEmail.substring(companyEmail.indexOf('companyName') + companyName.length);
+                    if(!contacts.includes(emails))
+                        contacts.push(emails)
+                    }
+                }
+                %>
+                <br>
+                <div class="name">
+                    <a href="details?code=<%= code %>&email=<%= email %>&contacts=<%= contacts %>" class="link">Reclaim</a>
+                </div>
+                </div>
+                <%
+            }
+    }
+    %>
+    <script>
+        var element = document.getElementById("gridOfFour");
+        var child = element.children;
+        var nodes = element.getElementsByClassName("logo");
+        for (let i = 0; i < nodes.length; i++) {
+            var colors = ['FF3855','FD3A4A','FB4D46','FA5B3D','FFAA1D','FFF700','299617','A7F432','2243B6','5DADEC','5946B2',
+            '9C51B6','A83731','AF6E4D','1B1B1B','BFAFB2','FF5470','FF7A00','FDFF00','87FF2A','0048BA','FF007C','E936A7']
+            var randomColor = colors[Math.floor(Math.random()*colors.length)]
+            console.log(nodes[i]+' '+i);
+            child[i].style.borderTop = "3px solid #"+randomColor;
+            nodes[i].style.backgroundColor = "#"+randomColor;
+        }
+    </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/mystyle/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <title>Digital Footprints - Data Removak</title>
+</head>
+<body>
+    <%- include('header') %>
+    <div class="gridOfTwo">
+        <div><h1 class="detailsh1">We have sent an email on behalf of you to the app (owner), regarding data removal.</h1><br><br><a href="/"><button>Back to Home</button></a></div>
+        <div class="msg">
+        <div><%= sub %></div><br>
+        <div>Hi, I've used your service in the past. However, I'm now making the conscious decision to reduce my digital footprint and as a result I ask you to please delete any personal data of mine you have stored on your systems.<br><br>I have initiated this request myself and it was sent from my own personal inbox (see From address of this email). I would appreciate your cooperation and an email confirming when the deletion has been completed.<br><br>My personal details are:<br>Email:<%= email %><br><br>I received an email from your company which indicates your systems hold my personal data.<br>Thanks</div>
+        </div>
+    </div>
+</body>
+</html>
